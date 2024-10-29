@@ -14,7 +14,7 @@ function User() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/admin/users/", {
+      const response = await axios.get("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/users/", {
         headers: {
           "Authorization": `Bearer ${token}`,
         }
@@ -32,7 +32,7 @@ function User() {
 
   const removeUser = async (id) => {
     try {
-      const response = await axios.post("http://localhost:5000/admin/users/remove", { id }, {
+      const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/users/remove", { id }, {
         headers: {
           "Authorization": `Bearer ${token}`,
         }
@@ -52,7 +52,7 @@ function User() {
   const addUser = async (e) => {
     e.preventDefault();  // Prevent form submission default behavior
     try {
-      const response = await axios.post("http://localhost:5000/admin/users/adduser", {
+      const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/users/adduser", {
         firstname,
         lastname,
         email,
