@@ -9,7 +9,7 @@ export default function Login({ setToken }) {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/admin/login', { adminEmail, adminPassword });
+            const response = await axios.post('https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/login', { adminEmail, adminPassword });
 
             console.log(response.data); // Check the response from the backend
 
