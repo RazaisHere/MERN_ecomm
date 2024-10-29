@@ -11,7 +11,7 @@ function List() {
     //   console.log("Token from localStorage:", token); 
   
       try {
-          const response = await axios.get("http://localhost:5000/admin/products/list", {
+          const response = await axios.get("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/products/list", {
               headers: {
                 "Authorization": `Bearer ${token}`
               }
@@ -30,7 +30,7 @@ function List() {
 
   const removeProduct = async (id) => {
     try {
-        const response = await axios.post("http://localhost:5000/admin/products/remove", { id }, {
+        const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/products/remove", { id }, {
             headers: {
                 "Authorization": `Bearer ${token}`
             }
