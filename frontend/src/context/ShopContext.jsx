@@ -57,7 +57,7 @@ export const ShopContextProvider = ({ children }) => {
     
         if (token) {
             try {
-                const response = await axios.post("http://localhost:5000/api/cart/addToCart", { itemId, size }, { headers: { Authorization: `Bearer ${token}` } });
+                const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/cart/addToCart", { itemId, size }, { headers: { Authorization: `Bearer ${token}` } });
                 if (response.data.success) {
                     toast.success("Item added");
                     // localStorage.setItem("userId", response.data.user._id);
@@ -97,7 +97,7 @@ export const ShopContextProvider = ({ children }) => {
 
         if (token) {
             try {
-                await axios.post("http://localhost:5000/api/cart/updatecart", { itemId, size, quantity }, { headers: { Authorization: `Bearer ${token}` } })
+                await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/cart/updatecart", { itemId, size, quantity }, { headers: { Authorization: `Bearer ${token}` } })
             } catch (error) {
                 console.log(error);
                 toast.error(error.message)
@@ -107,7 +107,7 @@ export const ShopContextProvider = ({ children }) => {
     //
     const getUserCart = async (token) => {
         try {
-            const response = await axios.post("http://localhost:5000/api/cart/getcart", {}, { headers: { Authorization: `Bearer ${token}` } });
+            const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/cart/getcart", {}, { headers: { Authorization: `Bearer ${token}` } });
 
             if (response.data.success) {
 
@@ -179,7 +179,7 @@ export const ShopContextProvider = ({ children }) => {
      
         
         try {
-            const response = await axios.get('http://localhost:5000/admin/products/list');
+            const response = await axios.get('https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/products/list');
           
             setProducts(response.data.products); // Set the fetched products data to state
         } catch (error) {
