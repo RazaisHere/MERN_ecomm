@@ -11,7 +11,7 @@ function Orders({ token }) {
       return null;
     }
     try {
-      const response = await axios.get("http://localhost:5000/api/order/list", {
+      const response = await axios.get("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/order/list", {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -26,7 +26,7 @@ function Orders({ token }) {
 
   const statusHandler=async(e,orderId)=>{
     try {
-      const response = await axios.post("http://localhost:5000/api/order/status",{orderId,status:event.target.value}, {headers: {
+      const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/order/status",{orderId,status:event.target.value}, {headers: {
         "Authorization": `Bearer ${token}`
       }})
       if(response.data.success){
