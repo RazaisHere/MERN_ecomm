@@ -37,7 +37,7 @@ function Add() {
       image2 && formData.append("image2", image2);
       image3 && formData.append("image3", image3);
   
-      const response = await axios.post("http://localhost:5000/admin/products/add", formData, {
+      const response = await axios.post("https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/admin/products/add", formData, {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Content-Type": "multipart/form-data"
