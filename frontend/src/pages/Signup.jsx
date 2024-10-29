@@ -19,7 +19,7 @@ function Signup() {
 
       }
       // ${backendUrl}
-      const response = await axios.post(`http://localhost:5000/api/users/signup`, {
+      const response = await axios.post(`https://mern-backend-wheat-eight.vercel.app/?vercelToolbarCode=Nc0sPSB5tLE5h3L/api/users/signup`, {
         firstname,
         lastname,
         email,
